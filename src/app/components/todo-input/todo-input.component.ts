@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Filter, FilterButton } from 'src/app/models/filtering.models';
 
 @Component({
   selector: 'app-todo-input',
