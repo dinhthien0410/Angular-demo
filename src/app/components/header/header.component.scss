@@ -1,6 +1,6 @@
-.icon-wrapper{
-  width: 40;
-  line-height: 40px;
+.icon-wrapper {
+  width: 40px;
+  line-height: 45px;
   font-size: 40px;
   color: grey;
   background: white;
@@ -10,11 +10,8 @@
   &:hover {
     color: black;
   }
-
 }
 
-
-app-todo-input{
-  margin-top: auto;
+app-todo-input {
   width: 100%;
 }

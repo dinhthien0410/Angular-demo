@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { TodoService } from './services/todo.service';
+import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Component({
@@ -10,12 +10,12 @@ import { map } from 'rxjs/operators';
 })
 export class AppComponent implements OnInit {
 
-  hasTodo$!:  Observable<boolean>;
-  constructor(private todoService: TodoService){};
+  hasTodo$!: Observable<boolean>;
 
-  ngOnInit(){
+  constructor(private todoService: TodoService) {}
+
+  ngOnInit() {
     this.todoService.fetchFromLocalStorage();
-    this.hasTodo$= this.todoService.length$.pipe(map(length=> length>0));
+    this.hasTodo$ = this.todoService.length$.pipe(map(length => length > 0));
   }
-
 }

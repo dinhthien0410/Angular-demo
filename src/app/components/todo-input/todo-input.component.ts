@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Filter, FilterButton } from 'src/app/models/filtering.models';
+import { Component, OnInit } from '@angular/core';
+import { TodoService } from 'src/app/services/todo.service';
 
 @Component({
   selector: 'app-todo-input',
@@ -8,14 +8,18 @@ import { Filter, FilterButton } from 'src/app/models/filtering.models';
 })
 export class TodoInputComponent implements OnInit {
 
-  todoContent!: string;
+  todoContent = '';
 
-  constructor() { }
+  constructor(private todoService: TodoService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
-  onTodoContentChanged(value:string){
-    console.log({value});
+  addTodo() {
+    if (this.todoContent.trim() === '') {
+    }
+
+    this.todoService.addTodo(this.todoContent);
+    this.todoContent = '';
   }
 }
