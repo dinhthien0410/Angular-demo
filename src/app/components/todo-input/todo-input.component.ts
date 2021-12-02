@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Filter, FilterButton } from 'src/app/models/filtering.models';
 
 @Component({
@@ -8,9 +8,14 @@ import { Filter, FilterButton } from 'src/app/models/filtering.models';
 })
 export class TodoInputComponent implements OnInit {
 
+  todoContent!: string;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onTodoContentChanged(value:string){
+    console.log({value});
+  }
 }

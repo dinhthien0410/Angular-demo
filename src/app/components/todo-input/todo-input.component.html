@@ -1,1 +1,1 @@
-<input type="text" placeholder="Cần hoàn thành việc gì ?">
+<input type="text" [ngModel]="todoContent" (ngModelChange)="onTodoContentChanged($event)" placeholder="Cần hoàn thành việc gì ?" required>
